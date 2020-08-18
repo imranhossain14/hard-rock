@@ -54,9 +54,11 @@ for (let i = 0; i < getLyrics.length; i++) {
     .then(function displayResult(lyric) {
         const currentLyric = lyric.lyrics;
         const displayArea = document.getElementById("lyricsArea");
-        displayArea.innerHTML = `<button class="btn go-back btn-success" onclick="hide()">Go Up</button>
+        displayArea.innerHTML = `
                                 <h2 class="text-success mb-4">${title}</h2>
-                                <pre class="lyric text-white">${currentLyric}</pre>`
+                                <pre class="lyric text-white">${currentLyric}</pre>
+                                <button class="btn go-back btn-success" onclick="hide()">Go Up</button>
+                                `
         })
     .catch(error => console.log(error))
     }
